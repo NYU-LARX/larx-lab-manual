@@ -62,3 +62,8 @@ Therefore, if we really want to install some local software without using the ro
 
 This website gives a detailed explanation for Filesystem Hierarchy Standard (FHS). Check [Linux目录配置](http://cn.linux.vbird.org/linux_basic/0210filepermission.php) section.
 
+
+
+[Into which directory should I install programs in Linux?](https://unix.stackexchange.com/questions/127076/into-which-directory-should-i-install-programs-in-linux)
+
+If you will be compiling your own software then you ultimately control the installation location. By convention, software compiled and installed manually (not through a package manager, e.g apt, yum, pacman) is installed in `/usr/local`. Some packages (programs) will create a sub-directory within `/usr/local` to store all of their relevant files in, such as `/usr/local/openssl`. Other packages will install their necessary files into existing directories such as `/usr/local/sbin` and `/usr/local/etc`. 
