@@ -56,6 +56,8 @@ passwd abc
 
 The system will prompt information to reset the password.
 
+**Note:** for regular users, the admin user first create the regular user account with default password. Then reguar users can log in and use the above command to reset their own password.
+
 
 
 ### Change File Permission

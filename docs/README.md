@@ -40,7 +40,7 @@ The remote access configurations are  discussed here:
 
 The software installations and version controls are discussed here:
 
-- installation
+- [Software Installation](_pages/installation.md) 
 
 
 

@@ -7,5 +7,7 @@
   * [User and Group Management](_pages/user_and_group.md)
 * Software Resource
   * [Remote Access](_pages/remote_access.md) 
+  * [Software Installation](_pages/installation.md)
+  * Common Questions
 * Fdfd
 

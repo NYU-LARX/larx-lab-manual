@@ -70,7 +70,7 @@ When using `ssh -X`, the server reder the display information and send back to t
 
 In practice, many softwares do not need to enable `-X` option to have graphic interface. They only require the server and software to have the same software. The server runs the software and send the computation back only. The client software receive the computation results and display the result to the user directly. No additional display information needs to be transmitted. The following figure shows two different modes. 
 
-![img](_media/ssh_graphics.png)
+![img](../_media/ssh_graphics.png)
 
 Many software such as *VS code* and *PyCharm* all follow the same pattern. We will discuss SSH of these softwares in [xxxxxxxxxxxxxxxxxx]()
 

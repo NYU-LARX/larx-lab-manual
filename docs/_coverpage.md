@@ -1,5 +1,7 @@
 <!-- _coverpage.md -->
 
+![logo](_media/logo.png)
+
 
 # LARX Lab Resource Manual <small>by docsify 4</small>
 
