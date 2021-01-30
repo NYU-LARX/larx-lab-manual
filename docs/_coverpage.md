@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 
 
-# Larx Lab Resource Manual <small>by docsify 4</small>
+# LARX Lab Resource Manual <small>by docsify 4</small>
 
 > Under construction. Suggestions and contributions are welcomed.
 

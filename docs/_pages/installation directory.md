@@ -1,3 +1,58 @@
+# Software Installation
+
+This pages introduces the Linux directory and software installation limitations for regular users. 
+
+In Linux, a software can be installed with binaries from repositories, or it can be installed from the source code. The source code has to be compiled to binaries to execute. The binaries are stored in different directories according to file types (executable binaries and library files). Upon the software execution, related binaries are found by the software to perform various functions. 
+
+Software installation is important because it has to be installed to somewhere so that the software can find it. Besides, normative installation keeps a neat environment for better mantainance. 
+
+
+
+## Installation Methods
+
+There are four typical ways to install a software in Linux:
+
+- Install via `apt`, usually performed by admin user.
+- Linux software center, install via `snap`, usually performed by admin user.
+- Download `deb` package and install via `dpkg`. 
+- Install from source code.
+
+Installation via `apt` and `snap` usually need root privilege. So the admin user normally take these two approaches. It is usually possible to redirect the installation path using  `dpkg` and source code installation. So these two approaches can be used by regular users.
+
+
+
+## Installation Location and Filesystem Hierarchy Standard
+
+For admin user, the first
+
+
+
+
+
+## System-Level vs User-Level Software Installation
+
+System-level and user-level software installations relfect whether the software installation will change system configuration. A system-level installation install the software (libraries and binaries) outside the `/home` directory (usually in `/usr` and `/opt`), while user-level installation only takes place inside `/home/user` directory. Therefore, user-level installation will not affect the system configuration.
+
+
+
+### System-Level Software Installation
+
+For system-level installation, related system configurations will be modified. So only the admin user has such privilege. After the installation, the installed software is available and executable for all regular users. We have discussed that regular users are only capable of modifying files within `/home` directories. Therefore, regular users do not have permission to perform system-level software installation. 
+
+The system-Level installation automatically manage the installation locations so that installed binaries can be found by the software.
+
+The administrator will guarantee all the necessary software such as *sublime*, *vscode*, *anaconda*, *panda*, *ROS*, pycharm, etc[^1], are all installed and function normally. It is also better for maintenance.  
+
+
+
+### User-Level Software Installation
+
+Regular users may install their own software locally based on personal needs. The installations are performed within `/home/user` directory. Therefore, the user-level installation manually put all binaries in `/home/user` directory and make sure the software can find them. In this way, a specific user's software will not affect system configuration as well as other regular users. 
+
+We will discuss how to conduct user-level installation for MATLAB in [xxxxxxxxx](). 
+
+
+
 ## Where to install the software in Linux?
 
 Usually when installing software in Linux, we have the following ways:

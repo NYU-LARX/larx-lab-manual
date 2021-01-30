@@ -5,6 +5,7 @@
   * [Basic Lab Info](_pages/basic_lab_info.md)
 * Users and Groups
   * [User and Group Management](_pages/user_and_group.md)
-* fdfd
+* Software Resource
+  * [Remote Access](_pages/remote_access.md) 
 * Fdfd
 
