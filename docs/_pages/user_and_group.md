@@ -72,6 +72,24 @@ chmod 644 test.txt
 
 
 
+### Important Initialization for Regular Users
+
+Since the admin user has to install some software from source code, to use these software, all regular users should execute the following commands.
+
+```bash
+# step 1: open terminal: Ctrl+Alt+T and type
+gedit ~/.bashrc
+# step 2: scroll down to the bottom and add the following
+export PATH="${PATH}:/opt/Python3.9.1/bin"
+export PATH="${PATH}:/home/xxx/.local/bin" 	# xxx is your username
+# step 3: save and close editor, they type
+source ~/.bashrc
+```
+
+
+
+
+
 ## Group Operations
 
 ### Concept of Groups

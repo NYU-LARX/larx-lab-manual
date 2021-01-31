@@ -8,6 +8,7 @@
 * Software Resource
   * [Remote Access](_pages/remote_access.md) 
   * [Software Installation](_pages/installation.md)
+  * [Installed Software](_pages/installed_software.md)
   * Common Questions
-* Fdfd
+* Other
 

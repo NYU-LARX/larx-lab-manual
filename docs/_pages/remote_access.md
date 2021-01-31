@@ -72,7 +72,7 @@ In practice, many softwares do not need to enable `-X` option to have graphic in
 
 ![img](../_media/ssh_graphics.png)
 
-Many software such as *VS code* and *PyCharm* all follow the same pattern. We will discuss SSH of these softwares in [xxxxxxxxxxxxxxxxxx]()
+Many software such as *VS code* and *PyCharm* all follow the same pattern. SSH configurations of these softwares are discussed in [Installed Software](_pages/installed_software.md)
 
 
 

@@ -38,9 +38,11 @@ The remote access configurations are  discussed here:
 
 
 
-The software installations and version controls are discussed here:
+The software installations, version controls, and installed software are discussed here:
 
 - [Software Installation](_pages/installation.md) 
+- version control
+- [Installed software](_pages/installed_software.md)
 
 
 
