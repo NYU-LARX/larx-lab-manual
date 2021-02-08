@@ -121,4 +121,5 @@ make -j8		# use 8 cores to compile
 make install	# install the compiled binaries
 ```
 
+We use [*Eigen3*](_pages/_software/eigen.md) as an example to demonstrate the user-level installation. 
 
