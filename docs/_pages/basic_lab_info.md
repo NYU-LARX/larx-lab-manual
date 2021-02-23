@@ -38,9 +38,10 @@ Other:
 
 ## Administrator Account
 
-For better management, each computer has the administrator account called `larx`. The administrator is response for managing packages, editing configuration files, installing a program from source. 
+For better management, each computer has the administrator account called `larx`. The administrator is response for managing packages, editing configuration files, installing a program from source. The administrator user name and password for all four computers.
 
-The password for administrator account is `xxxxxxxxx`.
+- username: `larx`
+- password:  `xxxxxxxxx`
 
 
 
@@ -48,7 +49,7 @@ The password for administrator account is `xxxxxxxxx`.
 
 All four computers are connected to NYU wifi with the following IP address:
 
-- Dell #1: xxx.xxx.xxx.xxx
+- Dell #1: `172.24.113.157`
 - Dell #2: `172.24.113.158`
 - Lambda: `172.24.113.159`
 
