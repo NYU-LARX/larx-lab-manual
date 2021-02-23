@@ -48,12 +48,12 @@ The password for admin account is `xxxxxxxxx`.
 
 All four computers are connected to NYU wifi with the following IP address:
 
-- Lambda: xxx.xxx.xxx.xxx
+- Lambda: 172.24.113.159
 - Dell #1: xxx.xxx.xxx.xxx
-- Dell #2: xxx.xxx.xxx.xxx
+- Dell #2: 172.24.113.158
 - Dell #3: xxx.xxx.xxx.xxx
 
 Dell #3 is also equipped with a router to form the lab local wireless network (LAN). The LAN is used for multi-robot controls. The local AP and password are
 
-- WiFi name: xxxx
-- Password: xxxx
+- WiFi name: TP-Link_A914
+- Password: 80187233
