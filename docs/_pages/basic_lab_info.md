@@ -1,6 +1,6 @@
-# Basic Information About Lab Resrouces
+# Basic Information About Lab Resources
 
-This page lists all available resouces in the lab.
+This page lists all available resources in the lab.
 
 
 
@@ -32,15 +32,15 @@ Jetson Nano:
 
 Other:
 
-- brian device?
+- eye tracker?
 
 
 
 ## Administrator Account
 
-For better management, each computer has the administrator account called `larx`. The admin is response for managing packages, editing config files, installing a program from source. 
+For better management, each computer has the administrator account called `larx`. The administrator is response for managing packages, editing configuration files, installing a program from source. 
 
-The password for admin account is `xxxxxxxxx`.
+The password for administrator account is `xxxxxxxxx`.
 
 
 
@@ -48,12 +48,13 @@ The password for admin account is `xxxxxxxxx`.
 
 All four computers are connected to NYU wifi with the following IP address:
 
-- Lambda: 172.24.113.159
 - Dell #1: xxx.xxx.xxx.xxx
-- Dell #2: 172.24.113.158
-- Dell #3: xxx.xxx.xxx.xxx
+- Dell #2: `172.24.113.158`
+- Lambda: `172.24.113.159`
 
-Dell #3 is also equipped with a router to form the lab local wireless network (LAN). The LAN is used for multi-robot controls. The local AP and password are
+**Note:** Dell #3 is used for ROS and other development. So it is equipped with a router to form the lab local wireless network (LAN). The LAN is used for multi-robot controls. The local AP and password are
 
-- WiFi name: TP-Link_A914
-- Password: 80187233
+- WiFi name: `TP-Link_A914`
+- Password: `80187233`
+
+**Note:** All IP addresses are private. To access computers remotely via *SSH*, make sure to first connect to NYU network or NYU VPN.
