@@ -4,35 +4,29 @@ This page lists all available resources in the lab.
 
 
 
-## Hardware and OS
+## Hardware Equipments
 
 **Computers:**
 
-- Lambda Workstation x1
-- Dell Workstation x3
-- Dell Monitors x6
-
-All computers are equipped with Ubuntu 18.04.
+- Lambda Workstation `x1`, (Ubuntu 18.04)
+- Dell Workstation `x3`, (Ubuntu 18.04)
+- Dell Monitors `x6`
 
 
 
 **Robots:**
 
-- Turtlebot Burger x3
-- Tutlebot Waffle x3
-- Turtlebot robotic arm x1
-
-All Turtlebot robots are equipped with  Raspberry Pi OS based on Debain 9.
+- Turtlebot Burger `x3`, (Raspberry Pi OS)
+- Tutlebot Waffle `x3`, (Raspberry Pi OS)
+- Turtlebot robotic arm `x1`
 
 
 
-Jetson Nano:
+**Others:**
 
-- Xxx
-
-Other:
-
-- eye tracker?
+- Jetson Nano `x3`
+- Eye tracker
+- Emotive
 
 
 
@@ -47,15 +41,30 @@ For better management, each computer has the administrator account called `larx`
 
 ## Network Configuration
 
+### Workstation Network Configuration
+
 All four computers are connected to NYU wifi with the following IP address:
 
 - Dell #1: `172.24.113.157`
 - Dell #2: `172.24.113.158`
 - Lambda: `172.24.113.159`
 
-**Note:** Dell #3 is used for ROS and other development. So it is equipped with a router to form the lab local wireless network (LAN). The LAN is used for multi-robot controls. The local AP and password are
+**Note:** All IP addresses are private. To access computers remotely via *SSH*, make sure to first connect to NYU network or NYU VPN.
+
+
+
+### Local Network Configuration
+
+A wireless Local Area Network (WAN) is set up for multi-agent control experiment purpose. Dell-3 is used as the base PC. The local AP and password are
 
 - WiFi name: `TP-Link_A914`
 - Password: `80187233`
 
-**Note:** All IP addresses are private. To access computers remotely via *SSH*, make sure to first connect to NYU network or NYU VPN.
+All robots and PC are assigned with the following IP addresses:
+
+- Dell PC: `192.168.0.125`
+- Burger #1: `192.168.0.208`
+- Burger #2: `192.168.0.190`
+- Waffle #1: `192.168.0.135`
+- Waffle #2: `192.168.0.153`
+
