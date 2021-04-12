@@ -47,7 +47,7 @@ The software installations, version controls, and installed software are discuss
 
 We also collects common questions when operating the system and software:
 
-- common questions
+- [common questions](_questions/qustions.md)
 
 
 
