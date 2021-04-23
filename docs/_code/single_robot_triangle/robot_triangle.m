@@ -3,29 +3,40 @@ classdef robot_triangle
     %   Detailed explanation goes here
     
     properties
+        pA0;
         PB = [2; 1.8];      % position of object B
         PC = [0.6; 1];      % position of object C (human)
-        v_max = 1;  % max linear velocity
-        w_max = 1;  % max angular velocity
+        v_max = 0.5;  % max linear velocity
+        w_max = 0.5;  % max angular velocity
         dt = 0.1;   % discrete time steps for GD controller
-        theta_0 = deg2rad(10);   % initial theta(0)
+        theta_0 = deg2rad(0);   % initial theta(0)
         alp1_0;     % initial alpha_1(0)
         alp2_0;     % initial alpha_2(0)
         Delta1;     % angle constant for edge AB
         Delta2;     % angle constant for edge AC
         d_bar;      % desired length for edge AB and AC
         alp_bar = pi/6;     % desired anglle
+        gam = 2.9;
     end
     
     methods
         function obj = robot_triangle(PA)
             %robot_triangle Construct an instance of this class
             
+            obj.pA0 = PA;
+            
             % compute alp1_0 and alp2_0
+            % all angles are counted counter clockwise
+            Axx = [cos(obj.theta_0); sin(obj.theta_0)];     % unit x' axis 
             AB = obj.PB - PA;
-            obj.alp1_0 = acos([1,0]*AB / norm(AB));
-            AC = obj.PB - PA;
-            obj.alp2_0 = acos([1,0]*AC / norm(AC));
+            obj.alp1_0 = acos(Axx' * AB / norm(AB));
+            
+            AC = obj.PC - PA;
+            if -Axx(2) >= AC(2) / norm(AC)
+                obj.alp2_0 = 2*pi - acos(Axx' * AC / norm(AC));
+            else
+                obj.alp2_0 = acos(Axx' * AC / norm(AC));
+            end
             
             % compute Delta1 and Delta2
             obj.Delta1 = obj.alp1_0 + obj.theta_0;
@@ -40,7 +51,9 @@ classdef robot_triangle
         
         function [v] = compute_v(obj, d1, d2, alp1, alp2)
             % This function computes the control v
-            v = (d1-obj.d_bar)*cos(alp1) + (d2-obj.d_bar)*cos(alp2);
+            %v = (d1-obj.d_bar)*cos(alp1) + (d2-obj.d_bar)*cos(alp2);
+            v = (d1-obj.d_bar)*cos(alp1) + (d2-obj.d_bar)*cos(alp2) ...
+                + obj.gam*(d1-d2)*(cos(alp1)-cos(alp2));
             v = obj.norm_v( v/2 );
         end
         
@@ -58,17 +71,27 @@ classdef robot_triangle
             xdot(4) = -w;
         end
         
+        function [J] = compute_J(obj, d1, d2, alp1, alp2)
+            % This function computes J
+            J = norm(d1-obj.d_bar)^2 + norm(d2-obj.d_bar)^2 ...
+                + norm(alp1+obj.alp_bar)^2 + norm(alp2+obj.alp_bar)^2 ...
+                + obj.gam*norm(d1-d2)^2;
+        end
+        
         function [Jdot] = compute_Jdot(obj, d1, d2, alp1, alp2, v, w)
             % This function computes dot{j}
             [xdot] = obj.compute_dynamics(alp1, alp2, v, w);
             
             Jdot = 2*(d1-obj.d_bar)*xdot(1) + 2*(d2-obj.d_bar)*xdot(2) ...
-                + 2*(alp1+obj.alp_bar)*xdot(3) + 2*(alp2-obj.alp_bar)*xdot(4);
+                + 2*(alp1+obj.alp_bar)*xdot(3) + 2*(alp2-obj.alp_bar)*xdot(4) ...
+                + 2*obj.gam*(d1-d2)*(xdot(1)-xdot(2));
         end
         
         
         function v_norm = norm_v(obj, v)
             % This function normalize the linear velocity
+            %v = abs(v);     % only positive v is allowed
+            
             if abs(v) > obj.v_max
                 v_norm = v / obj.v_max;
             else
@@ -79,20 +102,39 @@ classdef robot_triangle
         function w_norm = norm_w(obj, w)
             % This function normalize the angular velocity
             if abs(w) > obj.w_max
-                w_norm = w / obj.w_max;
+                w_norm = w / abs(w) * obj.w_max;
             else
                 w_norm = w;
             end
         end
         
+        function [xp] = compute_robot_pos(obj, xtraj)
+            % This function computes the robot position given the xtraj 
+            traj_length = size(xtraj, 2);
+            xp = zeros(2, traj_length);
+            xp(:, 1) = obj.pA0;
+            
+            for i = 2: traj_length
+                d1 = xtraj(1, i);
+                alp1 = xtraj(3, i);
+                theta = xtraj(5, i);
+                xp(:, i) = obj.PB - [d1*cos(theta+alp1); d1*sin(theta+alp1)];
+            
+                d2 = xtraj(2, i);
+                alp2 = xtraj(4, i);
+                xp(:, i) = obj.PC - [d2*cos(theta+alp2); d2*sin(theta+alp2)];
+            end
+        end
         
         function plot_traj(obj, xtraj)
             % This function plots the trajectory of the robot
             h = figure;
             
             traj_length = size(xtraj, 2);
+            xp = obj.compute_robot_pos(xtraj);
             for i = 1: traj_length
                 clf(h);
+%                [xtraj(1,i), xtraj(2,i), rad2deg(xtraj(3,i)), rad2deg(xtraj(4,i)), rad2deg(xtraj(5,i))]
                 
                 % plot B and C
                 obj.plot_rectangle(obj.PB);
@@ -103,13 +145,16 @@ classdef robot_triangle
                 % plot A and the trajectory points
                 x = xtraj(1:2, i);
                 alp1 = xtraj(3, i);
+                theta = xtraj(5, i);
                 
-                obj.plot_rectangle(x);
-                obj.plot_direction_bar(x, alp1);
+                pA = obj.PB - [x(1)*cos(theta+alp1); x(1)*sin(theta+alp1)];
+                obj.plot_rectangle(pA);
+                obj.plot_direction_bar(pA, theta);
                 for j = 1: i
-                    plot(xtraj(1, j), xtraj(2, j), 'rx', 'MarkerSize', 10);
+                    plot(xp(1, j), xp(2, j), 'rx', 'MarkerSize', 10);
+                    %plot(xtraj(1, j), xtraj(2, j), 'rx', 'MarkerSize', 10);
                 end 
-                pause(0.5)
+%                pause(0.01)
             end 
         end
         
@@ -123,12 +168,11 @@ classdef robot_triangle
             
         end
         
-        function plot_direction_bar(obj, center, alp1)
+        function plot_direction_bar(obj, center, theta)
             % This function plots the directional bar for the robot
             % center is the starting point of the bar
             l = 0.15;
-            angle = obj.alp1_0 - alp1 + obj.theta_0;
-            end_pt = l *[ cos(angle); sin(angle)] + center;
+            end_pt = l *[ cos(theta); sin(theta)] + center;
             line([center(1) end_pt(1)], [center(2) end_pt(2)], ...
                 'Color', 'k', 'LineWidth', 2);
         end
