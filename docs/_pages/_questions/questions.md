@@ -2,9 +2,9 @@
 
 
 
-## Raspbian Buster Linking Error
+## Raspbian Buster ros2 Linking Error
 
-**Description:** This linking error occurs when installing `ros2/rcl`,  `ros/rclcpp`, `tlsf`, `tlsf_cpp` packages. The issues is Pi cannot link to `automic` library.
+**Description:** This linking error occurs when installing `ros2/rcl`,  `ros/rclcpp`, `ros2/rcutils`, `tlsf`, `tlsf_cpp` packages. The issues is Pi cannot link to `automic` library.
 
 **Solution:** Modify the corresponding `CMakeLists.txt` in `rcl` packages by following the git:
 
