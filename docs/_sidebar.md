@@ -10,6 +10,6 @@
   * [Remote Access](_pages/remote_access.md) 
   * [Software Installation](_pages/installation.md)
   * [Installed Software List](_pages/installed_software.md)
-  * Common Questions
+  * [Common Questions](_questions/qustions.md)
 * For Future Use
 

@@ -42,8 +42,8 @@ ssh [option] username@ip_address
  For example, we want to remotely access the Linux server with username `abc`. We know the server has the IP address `1.1.1.1`, then we type
 
 ```bash
-ssh abc@1.1.1.1 	# for non-graphic application use
-ssh -X abc@1.1.1.1 	# for graphic application use
+ssh jack@1.1.1.1 	# for non-graphic application use
+ssh -X jack@1.1.1.1 	# for graphic application use
 ```
 
 After the login, we can use command line to start a application. 
@@ -78,7 +78,7 @@ Many software such as *VS code* and *PyCharm* all follow the same pattern. SSH c
 
 ### Interpretation of `-X` Parameter
 
-(add more).
+(to be added...).
 
 
 
@@ -86,7 +86,7 @@ Many software such as *VS code* and *PyCharm* all follow the same pattern. SSH c
 
 Virtual Network Computing (VNC) is a graphical desktop-sharing system that uses the Remote Frame Buffer protocol (RFB) to remotely control another computer. 
 
-(more to add...)
+(to be added...)
 
 
 

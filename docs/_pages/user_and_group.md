@@ -24,10 +24,10 @@ A regular user can utilize the resources of the system. However, he/she only has
 
 We need the admin user to create or delete a user. 
 
-To create a new user, we use the command `adduser`. For example, we want to add a new user `abc`. We type
+To create a new user, we use the command `adduser`. For example, we want to add a new user `jack`. We type
 
 ```bash
-sudo adduser abc
+sudo adduser jack
 ```
 
 The system will prompt necessary information to enter to finish the registration.
@@ -38,20 +38,20 @@ To delete a user, we use the command `deluser`. This command has many options:
 deluser  [options]  [--force] [--remove-home] [--remove-all-files] [--backup] [--backup-to DIR] user
 ```
 
- Usually, if we want to delete a user `abc` and remove all of files, we type
+ Usually, if we want to delete a user `jack` and remove all of files, we type
 
 ```bash
-sudo deluser --remove-all-files abc
+sudo deluser --remove-all-files jack
 ```
 
 
 
 ### Reset Password
 
-To reset the password, we use the command `passwd`. For example, we want to reset the password for user `abc`, we type
+To reset the password, we use the command `passwd`. For example, we want to reset the password for user `jack`, we type
 
 ```bash
-passwd abc
+passwd jack
 ```
 
 The system will prompt information to reset the password.
@@ -102,18 +102,18 @@ Groups are mainly used to share resources in Linux system. Groups permissions al
 
 We need the admin user to create or delete a group. 
 
-To create a new group, we use the command `addgroup`. For example, we want to add a new group `AandB`. We type
+To create a new group, we use the command `addgroup`. For example, we want to add a new group `group123`. We type
 
 ```bash
-sudo addgroup AandB
+sudo addgroup group123
 ```
 
 The system will prompt necessary information.
 
-To delete a group, we use the command `delgroup`. For example, we want to delete an existing group `AandB`. We type
+To delete a group, we use the command `delgroup`. For example, we want to delete an existing group `group123`. We type
 
 ```bash
-sudo delgroup AandB
+sudo delgroup group123
 ```
 
 
@@ -122,16 +122,16 @@ sudo delgroup AandB
 
 We need the admin user to add or delete a user from or to a group. 
 
-To add an existing user to an existing group, we use command `usermod`. For example, we want to add a user `abc` to a group `AandB`. We type
+To add an existing user to an existing group, we use command `usermod`. For example, we want to add a user `jack` to a group `group123`. We type
 
 ```bash
-sudo usermod -a -G AandB abc
+sudo usermod -a -G group123 jack
 ```
 
- To delete an existing user in a group, we use command `deluser`. For example, we want to delete a user `abc` from a group `AandB`. We type
+ To delete an existing user in a group, we use command `deluser`. For example, we want to delete a user `jack` from a group `group123`. We type
 
 ```bash
-sudo deluser abc AandB
+sudo deluser jack group123
 ```
 
 

@@ -9,7 +9,7 @@ This page lists all available resources in the lab.
 **Computers:**
 
 - Lambda Workstation `x1`, (Ubuntu 18.04)
-- Dell Workstation `x3`, (Ubuntu 18.04)
+- Dell Workstation `x3`, (Windows 10, Ubuntu  18.04 and 16.04)
 - Dell Monitors `x6`
 
 
@@ -55,14 +55,14 @@ All four computers are connected to NYU wifi with the following IP address:
 
 ### Local Network Configuration
 
-A wireless Local Area Network (WAN) is set up for multi-agent control experiment purpose. Dell-3 is used as the base PC. The local AP and password are
+A wireless Local Area Network (WAN) is set up for multi-agent control experiment purpose. Dell #3 is used as the base PC. The local AP and password are
 
 - WiFi name: `TP-Link_A914`
 - Password: `80187233`
 
 All robots and PC are assigned with the following IP addresses:
 
-- Dell PC: `192.168.0.125`
+- Dell #3: `192.168.0.125`
 - Burger #1: `192.168.0.208`
 - Burger #2: `192.168.0.190`
 - Waffle #1: `192.168.0.135`
