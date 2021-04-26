@@ -4,12 +4,12 @@ classdef robot_triangle_new
     
     properties
         pA0;
-        PB = [2; 1.8];      % position of object B
-        PC = [0.6; 1];      % position of object C (human)
+        PB = [2; 2];      % position of object B
+        PC = [1; 0.6];      % position of object C (human)
         v_max = 0.5;  % max linear velocity
         w_max = 0.5;  % max angular velocity
         dt = 0.1;   % discrete time steps for GD controller
-        theta_0 = deg2rad(165);   % initial theta(0)
+        theta_0 = deg2rad(145);   % initial theta(0)
         alp1_0;     % initial alpha_1(0)
         alp2_0;     % initial alpha_2(0)
         Delta1;     % angle constant for edge AB
@@ -17,7 +17,7 @@ classdef robot_triangle_new
         d_bar;      % desired length for edge AB and AC
         alp1_bar = 11*pi/6;     % desired alpha1
         alp2_bar = pi/6;        % desired alpha2
-        gam = 0;
+        gam = 0.1;
     end
     
     methods
@@ -88,15 +88,15 @@ classdef robot_triangle_new
         
         function [v] = compute_v(obj, d1, d2, alp1, alp2)
             % This function computes the control v
-            %v = (d1-obj.d_bar)*cos(alp1) + (d2-obj.d_bar)*cos(alp2);
-            v = (d1-obj.d_bar)*cos(alp1) + (d2-obj.d_bar)*cos(alp2) ...
-                + obj.gam*(d1-d2)*(cos(alp1)-cos(alp2));
+            v = (d1-obj.d_bar)*cos(alp1) + obj.gam*(d2-obj.d_bar)*cos(alp2);
+            %v = (d1-obj.d_bar)*cos(alp1) + (d2-obj.d_bar)*cos(alp2) ...
+            %    + obj.gam*(d1-d2)*(cos(alp1)-cos(alp2));
             v = obj.norm_v( v/2 );
         end
         
         function [w] = compute_w(obj, alp1, alp2)
             % This function computes the control w
-            w = obj.norm_w( (alp1+alp2)/2 );
+            w = obj.norm_w( (alp1+alp2-2*pi)/2 );
         end
         
         function [xdot] = compute_dynamics(obj, alp1, alp2, v, w)
@@ -110,18 +110,18 @@ classdef robot_triangle_new
         
         function [J] = compute_J(obj, d1, d2, alp1, alp2)
             % This function computes J
-            J = norm(d1-obj.d_bar)^2 + norm(d2-obj.d_bar)^2 ...
-                + norm(alp1-obj.alp1_bar)^2 + norm(alp2-obj.alp2_bar)^2 ...
-                + obj.gam*norm(d1-d2)^2;
+            J = norm(d1-obj.d_bar)^2 + obj.gam*norm(d2-obj.d_bar)^2 ...
+                + norm(alp1-obj.alp1_bar)^2 + norm(alp2-obj.alp2_bar)^2;% ...
+            %    + obj.gam*norm(d1-d2)^2;
         end
         
         function [Jdot] = compute_Jdot(obj, d1, d2, alp1, alp2, v, w)
             % This function computes dot{j}
             [xdot] = obj.compute_dynamics(alp1, alp2, v, w);
             
-            Jdot = 2*(d1-obj.d_bar)*xdot(1) + 2*(d2-obj.d_bar)*xdot(2) ...
-                + 2*(alp1-obj.alp1_bar)*xdot(3) + 2*(alp2-obj.alp2_bar)*xdot(4) ...
-                + 2*obj.gam*(d1-d2)*(xdot(1)-xdot(2));
+            Jdot = 2*(d1-obj.d_bar)*xdot(1) + obj.gam*2*(d2-obj.d_bar)*xdot(2) ...
+                + 2*(alp1-obj.alp1_bar)*xdot(3) + 2*(alp2-obj.alp2_bar)*xdot(4); %...
+                %+ 2*obj.gam*(d1-d2)*(xdot(1)-xdot(2));
         end
         
         

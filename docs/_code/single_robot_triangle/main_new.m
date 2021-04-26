@@ -2,7 +2,7 @@ close all
 clearvars
 
 eps = 1e-5; 
-PA = [3; 1.5];     % initial position of robot
+PA = [3.5; .2];     % initial position of robot
 rb = robot_triangle_new(PA);
 
 iter = 1;
@@ -42,10 +42,11 @@ while 1
     if abs(rb.compute_Jdot(d1_k, d2_k, alp1_k, alp2_k, v_k, w_k)) <= eps || ...
         iter >= iter_max
         rb.compute_J(d1_k, d2_k, alp1_k, alp2_k)
+        rb.compute_Jdot(d1_k, d2_k, alp1_k, alp2_k, v_k, w_k)
         break
     end
     
     iter = iter + 1;
 end
 
-%rb.plot_traj(xtraj);
+rb.plot_traj(xtraj);
