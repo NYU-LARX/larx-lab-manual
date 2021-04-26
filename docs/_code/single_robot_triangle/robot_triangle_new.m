@@ -9,7 +9,7 @@ classdef robot_triangle_new
         v_max = 0.5;  % max linear velocity
         w_max = 0.5;  % max angular velocity
         dt = 0.1;   % discrete time steps for GD controller
-        theta_0 = deg2rad(10);   % initial theta(0)
+        theta_0 = deg2rad(165);   % initial theta(0)
         alp1_0;     % initial alpha_1(0)
         alp2_0;     % initial alpha_2(0)
         Delta1;     % angle constant for edge AB
