@@ -47,7 +47,15 @@ The software installations, version controls, and installed software are discuss
 
 We also collects common questions when operating the system and software:
 
-- [common questions](_questions/qustions.md)
+- [Common Questions](_questions/qustions.md)
+
+
+
+## Lab Projects
+
+The following is a list of lab projects which uses robots and other lab facilitates.
+
+- [Single Robot Triangle Formation](_project/single_robot_triangle/README.md)
 
 
 

@@ -11,5 +11,7 @@
   * [Software Installation](_pages/installation.md)
   * [Installed Software List](_pages/installed_software.md)
   * [Common Questions](_questions/qustions.md)
-* For Future Use
+* Lab Projects
+  * [Single Robot Triangle Formation](_project/single_robot_triangle/README.md)
+* For Future Uses
 
