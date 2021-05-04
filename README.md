@@ -10,4 +10,4 @@ This repo contains necessary documentation for LARX lab resrouce management as w
 The lab members are welcome to contribute the repo through a Pull Request.
 
 ## License
-Released ubder [MIT liense](https://github.com/MichaelCurrin/docsify-js-tutorial/blob/master/LICENSE).
+Released under [MIT liense](https://github.com/MichaelCurrin/docsify-js-tutorial/blob/master/LICENSE).
