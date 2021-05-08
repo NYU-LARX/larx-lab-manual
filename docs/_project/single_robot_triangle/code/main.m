@@ -2,12 +2,12 @@ close all
 clearvars
 
 eps = 1e-5; 
-PA = [3; 1.5];     % initial position of robot
+PA = [3.5; .2];     % initial position of robot
 rb = robot_triangle_new(PA);
 
 iter = 1;
 iter_max = 1e4;
-xtraj = [norm(PA-rb.PB); norm(PA-rb.PC); rb.alp1_0; rb.alp2_0; rb.theta_0];
+xtraj = [norm(PA-rb.PB); norm(PA-rb.PC); rb.alp1_0; rb.alp2_0; rb.theta_0; rb.theta_0];
 utraj = [];
 d1_k = norm(PA-rb.PB);
 d2_k = norm(PA-rb.PC);
@@ -28,6 +28,7 @@ while 1
     xtraj_new(4) = rb.proj_alp(xtraj_new(4));
     % theta
     xtraj_new(5) = rb.alp1_0 - xtraj_new(3) + rb.theta_0;
+    xtraj_new(6) = rb.alp2_0 - xtraj_new(4) + rb.theta_0;
     xtraj(:, iter+1) = xtraj_new;
     
     % update variable
@@ -41,10 +42,11 @@ while 1
     if abs(rb.compute_Jdot(d1_k, d2_k, alp1_k, alp2_k, v_k, w_k)) <= eps || ...
         iter >= iter_max
         rb.compute_J(d1_k, d2_k, alp1_k, alp2_k)
+        rb.compute_Jdot(d1_k, d2_k, alp1_k, alp2_k, v_k, w_k)
         break
     end
     
     iter = iter + 1;
 end
 
-%rb.plot_traj(xtraj);
+rb.plot_traj(xtraj);

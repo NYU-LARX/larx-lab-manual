@@ -4,8 +4,8 @@ This project studies how to manipulate turtlebot to form a equilateral triangle 
 
 The turtlebot is eqipped with Lidar which can give distance and angle information of the obstacle and human. We aim to design a controller with Lidar to achieve the objective.
 
-Description of directories:
-- `code`: stores the MATLAB simulation code.
-- `plots`: stores plots related to the project.
+The triangle formation document can be downloaded [here](_project/single_robot_triangle/triangle_formation_doc.pdf)
+
+The MATLAB simulation code can be downloaded [here](_project/single_robot_triangle/code/triangle_formation_matlab_code.zip)
 
 
