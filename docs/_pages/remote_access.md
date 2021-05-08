@@ -39,10 +39,10 @@ For computer with Linux system, SSH can provides both graphic and non-graphic su
 ssh [option] username@ip_address
 ```
 
- For example, we want to remotely access the Linux server with username `abc`. We know the server has the IP address `1.1.1.1`, then we type
+For example, we want to remotely access the Linux server with username `jack`. We know the server has the IP address `1.1.1.1`, then we type
 
 ```bash
-ssh jack@1.1.1.1 	# for non-graphic application use
+ssh jack@1.1.1.1	 	# for non-graphic application use
 ssh -X jack@1.1.1.1 	# for graphic application use
 ```
 
