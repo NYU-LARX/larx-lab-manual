@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="turtlebot3_triangle" type="triangle.py" name="triangle" output="screen"> 
+	</node>
+</launch>
