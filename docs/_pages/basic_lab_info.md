@@ -32,10 +32,10 @@ This page lists all available resources in the lab.
 
 ## Administrator Account
 
-For better management, each computer has the administrator account called `larx`. The administrator is response for managing packages, editing configuration files, installing a program from source. The administrator user name and password for all four computers.
+For all computers, the administrator account is `larx`. The administrator is response for routine system update including updating software packages and editing system-level configuration files. The admin user name and password:
 
 - username: `larx`
-- password:  `xxxxxxxxx`
+- password:  `larx`
 
 
 
@@ -49,7 +49,7 @@ All four computers are connected to NYU wifi with the following IP address:
 - Dell #2: `172.24.113.158`
 - Lambda: `172.24.113.159`
 
-**Note:** All IP addresses are private. To access computers remotely via *SSH*, make sure to first connect to NYU network or NYU VPN.
+**Note:** All IP addresses are private. To access computers remotely via `ssh`, make sure to first connect to **NYU network** or **NYU VPN**.
 
 
 

@@ -1,12 +1,14 @@
 <!-- _coverpage.md -->
 
-![logo](_media/logo.png)
+<!-- background color -->
+![color](#7311bf)
+
+![logo](_media/larx_logo.png)
 
 
-# LARX Lab Resource Manual <small>by docsify 4</small>
+# LARX Lab Resource Manual <small>by docsify 4.13</small>
 
-> Under construction. Suggestions and contributions are welcomed.
-
+> Documentation for LARX lab resrouce management. Suggestions and contributions are welcomed.
 
 
 [GitHub](https://github.com/yuhan-zhao/larx_resource)

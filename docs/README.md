@@ -2,7 +2,7 @@
 
 # LARX Lab Resources Manual Homepage
 
-This Lab manual provides the lab equipment information and the guidance of lab workstations. It also provides some basic background of Linux environments.
+This Lab manual documents the lab equipment information and the guidance of lab workstations. It also provides some basic background of Linux OS.
 
 The document is still under construction. Any type of suggestions and contribution are welcomed.
 
@@ -16,47 +16,45 @@ All available lab resources and related configurations are introduced in [Basic 
 
 ## User and Group Management
 
-We encourage everyone to create their own user account to use workstations instead of the administrator account for the following reasons:
+We encourage everyone to create their **own user account** to use workstations instead of the administrator account for the following reasons:
 
-- To  avoid potential configuration confusion.
-- To keep a clear and tidy server environments for the administrator and all users.
-- To provide better updates and maintenance.
-- To guarantee the the privacy of the individual user and avoid potential conflict. 
+- To avoid potential configuration confusion.
+- To keep a clear and tidy server environment for the administrator and all users.
+- To provide a better maintenance and update process.
+- To ensure the privacy of individual users. 
 
-To create a regular user account for each user, please refer to [Create New Users](_pages/create_new_user.md). 
+To create a regular user account for each user, please refer to [User Management](_pages/user_management.md). 
 
-The [User and Group Management](_pages/user_and_group.md) lists more details about Linux users and groups.
+We refer to [User Management](_pages/user_management.md) and [Group Management](_pages/group_management.md) for more details about Linux users and groups.
 
 
 
 ##  Software Resource Related
 
-The remote access configurations are  discussed here:
+The remote access configurations for Linux OS are discussed here:
 
 - [Remote Access](_pages/remote_access.md)
 
 
-
 The software installations, version controls, and installed software are discussed here:
-
 - [Software Installation](_pages/installation.md) 
 - version control
 - [Installed software](_pages/installed_software.md)
 
 
-
-We also collects common questions when operating the system and software:
-
+We also collects common questions for using the system and software:
 - [Common Questions](_questions/qustions.md)
 
 
 
 ## Lab Projects
 
-The following is a list of lab projects which uses robots and other lab facilitates.
+We encourage every lab member to crate a project repo in our LARX organization. A clear README file is required for every project.
+
+<!-->The following is a list of lab projects which uses robots and other lab facilitates.
 
 - [Single Robot Triangle Formation](_project/single_robot_triangle/README.md)
-
+</-->
 
 
 ## Related Reading
