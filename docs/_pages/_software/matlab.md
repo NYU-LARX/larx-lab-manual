@@ -1,43 +1,43 @@
 # MATLAB
 
-With individual academic licence, MATLAB only specifies a single username to use the software. For example, if a user `abc` installed MATLAB, then another user `xyz` cannot even open the MATALB because MATLAB recognize the username and only allow the user `abc` to use it. Therefore, each regular user has to install MATLAB individually into his/her own home directory.
+MATLAB only allows a single user to access the software with a personalized licence. Therefore, users need to install MATLAB locally in their own home directory and use it with their own licences.
 
-## MATLAB Installation
+
+### MATLAB Installation
 
 Step 1: Go to [Mathworks](https://www.mathworks.com/) and login with your own Mathworks account. If you do not have an account, check [NYU MATLAB](https://www.nyu.edu/life/information-technology/getting-started/software/matlab.html) for more details.
 
-
-
 Step 2: Download the lastest version of MATLAB. 
 
-
-
-Step 3: Go to `Download` directory to unzip the file by typing 
+Step 3: Go to `Download` directory and unzip the tarball： 
 
 ```bash
-tar xf file_name	# the file name is the donwloaded tarball file
+$ tar xf file_name
 ```
-
-
 
 Step 4: Go to the unzipped directory and double click `install.sh`.
 
+Step 5: Select installation path. We recommend to install MATLAB to `/home/username/opt/MATLAB`.
 
+Step 6: Follow the instructions and complete the installation. 
 
-Step 5: Select installation path. We recommend to install matlab into `/home/username/.local/MATLAB`. 
-
-Step 6: Follow the instructions and finish the installation. 
-
-
-
-## MATLAB Remote Access
-
-To access MATLAB remotely, we need to use ssh to access the server, check [Remote Access via SSH](_pages/remote_access.md#remote-access-via-ssh), then type 
-
+Step 7: Update `PATH` environment variable:
 ```bash
-matlab -nodesktop
+$ export PATH="$PATH:/home/username/opt/MATLAB/R2020b/bin"    # take MATLAB R2020 for example.
 ```
 
-to run MATLAB without desktop. It can be difficult to get MATLAB desktop for non-Linux computer via SSH currently. We willl figure out how to use VNC to access MATLAB with desktop for computers with any OS. 
 
-It is recommeded to use MATLAB at the lab directly if needed.
+
+### MATLAB Remote Access
+
+To access MATLAB remotely, we need to use `ssh` to access the workstation, check [Remote Access via SSH](_pages/remote_access.md#remote-access-via-ssh) for more details.
+
+After logging into the remote host, we can run MATLAB command line by 
+```bash
+$ matlab -nodesktop
+```
+
+We can also enable graphic UI if the user's computer installs an X server. If so, we simply run
+```bash
+$ matlab
+```

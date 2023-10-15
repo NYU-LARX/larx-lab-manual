@@ -34,14 +34,14 @@ For Linux clients, X server is automatically installed. For Windows and MacOS cl
 For computer with Linux system, SSH can provides both graphic and non-graphic support to access the Linux server remotely. The ssh format of `ssh` goes as follows.
 
 ```bash
-ssh [option] username@host_ip_address
+$ ssh [option] username@host_ip_address
 ```
 
 For example,
 
 ```bash
-ssh foo@x.x.x.x	 	# access user account foo with CLI only
-ssh -X foo@x.x.x.x 	# access user account foo by enabling graphic interfaces.
+$ ssh foo@x.x.x.x	 	# access user account foo with CLI only
+$ ssh -X foo@x.x.x.x 	# access user account foo by enabling graphic interfaces.
 ```
 
 `ssh -X` means enableing `X11` forwarding. `X11` is a window system for bitmap displays, and it provides a framework for a GUI environment. Take MATLAB for example. we cannot visualize MATLAB graphic interface if we do not include `-X` option. However, the graphic interface is available if we include `-X`.

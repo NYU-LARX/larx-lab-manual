@@ -35,13 +35,13 @@ We need the admin user to add or delete a user from or to a group.
 To add an existing user to an existing group, we use command `usermod`. Log into `larx` account. Open a terminal and type
 
 ```bash
-sudo usermod -a -G group123 foo     # add a user `foo` to a group `foobar`
+$ sudo usermod -a -G group123 foo     # add a user `foo` to a group `foobar`
 ```
 
 To delete an existing user in a group, we use command `deluser`. Log into `larx` account. Open a terminal and type
 
 ```bash
-sudo deluser foo foobar         #  delete a user `foo` from a group `foobar`
+$ sudo deluser foo foobar         #  delete a user `foo` from a group `foobar`
 ```
 
 

@@ -24,13 +24,12 @@ System-level installation is performed by the *admin user* because it requires t
 
 Software with the following features can be installed globally:
 - commonly used;
-- well maintained, usually from Linux repo or software store;
+- well maintained by organizations, usually from Linux repo or software store;
 - open source without personal licence.
 
-For example, web browsers, code editors, and infrastructure software like C/C++ compliers.
+For example, web browsers, code editors, and infrastructure software like C/C++ compliers and drivers.
 
-Large software goes to `/opt/`, monolithic, like google
-other software goes to `/usr/`, convention
+**Note:** It is important to know that all software does not need `sudo` privilege to execute. Therefore, there is no need to perform system-level installation to install every software. In fact, it is always recommended to install software locally so that users does not affect each other. Once a software is installed globally, the user may always need to log in as the admin user to configure it.
 
 
 
@@ -38,31 +37,26 @@ other software goes to `/usr/`, convention
 User-level installation is performed by *regular users*. It is only conducted inside `/home/user` directory and will not affect the system configuration as well as other regular users. Once installed, the software is only available for the user who installed it. No other user can use it.
 
 Software with the following features should be installed locally:
-- not commonly used
-- need personal licence
-- need extra user-specific configurations
+- not commonly used;
+- need personal licence;
+- need extra user-specific configurations.
 
-For example, MATLAB, anaconda, specific optimization solvers like GUROBI. Installing such software in system-wide can increase the maintainance complexity.
+For example, MATLAB, anaconda, specific optimization solvers like GUROBI. Installing such software in system-wide can increase the admin maintainance complexity.
 
-We can create `/home/username/opt/` and `/home/username/.local` as the installation directory for better management.
 
-For user-level source code installation, we recommend the user put all the binary files to the `/home/username/.local` directory for better management. The following commands may be helpful for user-level source code installation.
+### Guideline for User-Level Installation
+We provide a brief guideline for user-level installation. Detailed user-level installation instructions for common software can be found in [xxx]().
 
-When installing a external library for your own project use or a small source code software that **needs to compile and install using `make`, `make install` commands**. It is recommended to install them to `/usr/local/`. Such packages often have `./configure` fies to specify the installation path. Usually, we can use 
+We can create `/home/username/opt/` and `/home/username/.local` in the user home directory as the installation directory for better management.
+- `/home/username/opt/` is used for monolithic software, such as foxit pdf reader.
+- `/home/username/.local` is used for installing external software that requires `make` and `make install` commands. 
+
+**Note:** `/home/username/.local` mimics the `/usr/` directory to store installed files. Inside `.local/` we have `./local/bin/`, `./local/lib/`, etc.. We recommend the user put all the binary files to this directory. The software installed in this directory is generally the user's own compiled project or a open-source software that needs to compile and install using `make`, `make install` commands. 
+
+Once the installation is completed, update `PATH` environment variable by adding the executable path, in general `bin\` directory, to ensure the computer can find the executables.
 
 ```bash
-# step 1: check if `/home/username/.local` directory exists
-mkdir /home/username/.local
-# step 2: go to downloaded software package and type the following
-./configure --help less 					# for checking options
-./configure --prefix=/home/username/.local 	# set install path
-# step 3: compile and install the software
-make -j8		# use 8 cores to compile
-make install	# install the compiled binaries
+$ export PATH=$PATH:/home/username/opt/<software_dir>/bin      # for monolithic software
+$ export PATH=$PATH:/home/usermame/.local/bin                  # for open source software
+$ source ~/.bashrc                                              # update environment variable
 ```
-
-We use [*Eigen3*](_pages/_software/eigen.md) as an example to demonstrate the user-level installation. 
-
-remember to add to path.
-
-Python is commonly used. either installation anaconda, or install new version of python locally, see example.

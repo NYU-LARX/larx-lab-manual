@@ -31,8 +31,8 @@ Others:
 The following popular software are recommended to installed locally by each regular user. We provide installation instructions for all of them.
 - [Latest Python](_pages/_software/python.md)
 - [MATLAB](_pages/_software/matlab.md)
-- [Julia]()
+- [Julia](_pages/_software/julia.md)
 - [Anaconda](_pages/_software/anaconda.md)
-- [Foxit Reader]()
+- [Foxit PDF Reader](_pages/software/foxit_pdf.md)
 - [Eigen3](_pages/_software/eigen.md)
 

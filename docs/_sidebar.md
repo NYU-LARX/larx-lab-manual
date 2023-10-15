@@ -9,8 +9,8 @@
 * Software Resources
   * [Remote Access](_pages/remote_access.md) 
   * [Software Installation](_pages/installation.md)
-  * [Filesystem Hierarchy Standard](_pages/fhs_linux.md)
   * [Installed Software List](_pages/installed_software.md)
+  * [Filesystem Hierarchy Standard](_pages/fhs_linux.md)
   * [Common Questions](_questions/qustions.md)
 * Lab Projects
   * [Single Robot Triangle Formation](_project/single_robot_triangle/README.md)

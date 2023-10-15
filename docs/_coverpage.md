@@ -1,9 +1,7 @@
 <!-- _coverpage.md -->
 
-<!-- background color -->
-![color](#7311bf)
 
-![logo](_media/larx_logo.png)
+![logo](_media/larx_logo_1.png)
 
 
 # LARX Lab Resource Manual <small>by docsify 4.13</small>
@@ -14,3 +12,6 @@
 [GitHub](https://github.com/yuhan-zhao/larx_resource)
 [Get Started](#larx-lab-resources-manual-homepage)
 
+
+<!-- background color -->
+![color](#7311bf)
