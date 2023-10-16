@@ -6,7 +6,8 @@
 
 # LARX Lab Resource Manual <small>by docsify 4.13</small>
 
-> Documentation for LARX lab resrouce management. 
+> Documentation for LARX lab resrouce management.
+
 > Suggestions and contributions are welcomed.
 
 
