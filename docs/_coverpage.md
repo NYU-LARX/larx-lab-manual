@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 
 
-![logo](_media/larx_logo_1.jpg)
+![logo](_media/larx_logo_2.png)
 
 
 # LARX Lab Resource Manual <small>by docsify 4.13</small>
@@ -14,4 +14,4 @@
 
 
 <!-- background color -->
-![color](#7311bf)
+<!-->![color](#7311bf)<-->
