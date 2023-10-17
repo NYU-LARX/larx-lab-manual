@@ -60,7 +60,7 @@ A wireless Local Area Network (WAN) is set up for multi-agent control experiment
 - WiFi name: `TP-Link_A914`
 - Password: `80187233`
 
-All robots and PC are assigned with the following IP addresses:
+All robots and PCs are assigned with the following IP addresses:
 
 - Dell #3: `192.168.0.125`
 - Burger #1: `192.168.0.208`

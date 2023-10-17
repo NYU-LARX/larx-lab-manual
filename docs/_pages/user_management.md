@@ -1,6 +1,10 @@
 # User Management 
 
+<<<<<<< HEAD
 This page introduces the basic operations for users in Linux, including adding and deleting a user, changing the password, etc..
+=======
+This page introduces the basic operations for users in Linux, including adding and deleting a user, changing the password, etc.
+>>>>>>> larx_resource/main
 
 
 ### Root User, Admin User, and Regular Users
@@ -22,13 +26,21 @@ A *regular user* can utilize the system's resources within his/her account. Howe
 
 We need the admin user to create a regular user account. 
 
+<<<<<<< HEAD
 First, log into `larx` account. Open a terminal and type
+=======
+First, log into the `larx` account. Open a terminal and type
+>>>>>>> larx_resource/main
 
 ```bash
 $ sudo adduser foo 	# add a new user with username foo
 ```
 
+<<<<<<< HEAD
 Then follow the prompt, complete the registration, and logout `larx` account.
+=======
+Then, follow the prompt, complete the registration, and log out of the `larx` account.
+>>>>>>> larx_resource/main
 
 
 ### Reset Password
@@ -82,7 +94,7 @@ $ cat /etc/passwd		    # list all existing users
 $ cat /etc/passwd | grep foo 	# list user info of user foo
 ```
 
-The output may like this:
+The output may be like this:
 
 ```
 mark:x:1001:1001:mark,,,:/home/mark:/bin/bash
@@ -100,7 +112,11 @@ mark:x:1001:1001:mark,,,:/home/mark:/bin/bash
 1. **Username**: The string you type when you log into the system. Each username must be a unique string on the machine. The **maximum length** of the username is restricted to **32** characters.
 2. **Password**: In older Linux systems, the user’s encrypted password was stored in the `/etc/passwd` file. On most modern systems, this field is set to `x`, and the [user password](https://linuxize.com/post/how-to-change-user-password-in-linux/) is stored in the `/etc/shadow` file.
 3. **UID**: The user identifier is a number assigned to each user. The operating system uses it to refer to a user.
+<<<<<<< HEAD
 4. **GID**: The user’s group identifier number refers to the user’s primary group. When a user creates a file, the file’s group is set to this group. Typically, the group's name is the same as the user's name. User’s [secondary groups](https://linuxize.com/post/how-to-add-user-to-group-in-linux/) are listed in the `/etc/groups` file.
+=======
+4. **GID**: The user’s group identifier number refers to the user’s primary group. When a user creates a file, the file’s group is set to this group. Typically, the group's name is the same as the user's. User’s [secondary groups](https://linuxize.com/post/how-to-add-user-to-group-in-linux/) are listed in the `/etc/groups` file.
+>>>>>>> larx_resource/main
 5. **GECOS** or **the full name of the user**: This field contains a list of comma-separated values with the following information:
    - User’s full name or the application name.
    - Room number.
@@ -114,7 +130,13 @@ mark:x:1001:1001:mark,,,:/home/mark:/bin/bash
 We can also print the user ID using the `id` command:
 
 ```bash
+<<<<<<< HEAD
 $ id foo 		# print full id information of user foo
 $ id -g foo	    # print user id for user foo
 $ id -gn foo 	# print user name for user foo, just copy
+=======
+$ id foo 		   # print full id information of user foo
+$ id -g foo	      # print user id for user foo
+$ id -gn foo 	   # print user name for user foo, just copy
+>>>>>>> larx_resource/main
 ```

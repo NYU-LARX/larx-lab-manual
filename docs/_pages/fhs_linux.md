@@ -15,7 +15,11 @@ FHS specifies the structure to store all types of Linux files. The entire struct
 
 ![fhs](https://www.tecmint.com/wp-content/uploads/2013/09/Linux-Directory-Structure.jpeg)
 
+<<<<<<< HEAD
 These subdirectories can be divided into four categories by sharability and variability. A more detailed explanation for FHS is given in [Linux Directory Configuration](http://cn.linux.vbird.org/linux_basic/0210filepermission.php) section.
+=======
+These subdirectories can be divided into four categories by sharability and variability. A more detailed explanation for FHS is given in the [Linux Directory Configuration](http://cn.linux.vbird.org/linux_basic/0210filepermission.php) section.
+>>>>>>> larx_resource/main
 
 |              | sharable                      | unsharable                            |
 | ------------ | ----------------------------- | ------------------------------------- |
@@ -24,7 +28,11 @@ These subdirectories can be divided into four categories by sharability and vari
 | **variable** | `/var/main` (user email)      | `/var/run` (related to applications)  |
 |              | `/var/spool/news` (user news) | `/var/lock` (related to applications) |
 
+<<<<<<< HEAD
 There is also a related webpage worth reading: [How to understand the Ubuntu file system layout?](https://askubuntu.com/questions/138547/how-to-understand-the-ubuntu-file-system-layout) One of the answers gives the following easy-to-understand figure.
+=======
+A related webpage is worth reading: [How to understand the Ubuntu file system layout?](https://askubuntu.com/questions/138547/how-to-understand-the-ubuntu-file-system-layout) One of the answers gives the following easy-to-understand figure.
+>>>>>>> larx_resource/main
 
 <img src="https://i.stack.imgur.com/BlpRb.png" alt="image" style="zoom:50%;" />
 
@@ -34,7 +42,11 @@ There is also a related webpage worth reading: [How to understand the Ubuntu fil
 
 The system-level installed software goes to one of the following directories:`/usr`, `/usr/local`, and `/opt`.
 - Precompiled software installed via `apt` usually goes to `/usr`. The package manager will take care of the installation.
+<<<<<<< HEAD
 - Software that needs to compile from the source code usually goes to `/usr/local`. The compilation occurs on the server and necessary commands (eg. `./configure; make; make install`)  are involved.
+=======
+- Software that needs to compile from the source code usually goes to `/usr/local`. The compilation occurs on the server, and necessary commands (e.g. `./configure; make; make install`)  are involved.
+>>>>>>> larx_resource/main
 - The large and unbundled software should go to `/opt`. These software are usually self-contained and provide their own subdirectories and file hierarchy. Software such as *chrome* and *ROS* should be installed in `/opt`.
 
 In short, large and monolithic software goes to `/opt`. Other software (precompiled or needs compilation) goes to `/usr`.
@@ -54,9 +66,15 @@ In Linux, the software is binary files. To execute these binaries, the OS needs 
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 ```
 
+<<<<<<< HEAD
 The colon `:` is the separator. Note that the default `PATH` does not contain `/opt` directory. Therefore, if we install software in `/opt`, we need to update `PATH` environment variable to ensure the OS finds the software. We use `export` command to update `PATH`. For example,
 
 Therefore, to update the path, we use `export` command. For example, we installed ROS melodic to `/opt` and type
+=======
+The colon `:` is the separator. The default `PATH` does not contain the `/opt` directory. Therefore, if we install the software in `/opt`, we must update the `PATH` environment variable to ensure the OS finds the software. We use the `export` command to update `PATH`. For example,
+
+Therefore, to update the path, we use the `export` command. For example, we installed ROS melodic to `/opt`, and we type
+>>>>>>> larx_resource/main
 ```bash
 $ export PATH="${PATH}:/opt/ros/melodic/bin"
 ```

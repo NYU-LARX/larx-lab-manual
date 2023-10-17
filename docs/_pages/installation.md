@@ -4,7 +4,11 @@ In Linux, the software can be installed by **binaries** (also called executables
 
 Software installation is important because all binaries should be installed somewhere so that the software can find it. Besides, normative installation keeps a neat environment for better maintenance.
 
+<<<<<<< HEAD
 We refer to [Linux Filesystem Hierarchy Standard](_pages.fhs_linux.md) to better understand the convention of where to install new software in Linux.
+=======
+We refer to [Linux Filesystem Hierarchy Standard](_pages/fhs_linux.md) to better understand the convention of where to install new software in Linux.
+>>>>>>> larx_resource/main
 
 
 ### Installation Methods
@@ -13,14 +17,22 @@ There are four typical ways to install software in Linux:
 
 - Install via `apt`, performed by the admin user.
 - Linux software center, install via `snap`, performed by admin user.
+<<<<<<< HEAD
 - Download `deb` package and install via `dpkg`, usually performed by an admin user.
+=======
+- Download `deb` package and install via `dpkg`, usually performed by the admin user.
+>>>>>>> larx_resource/main
 - Install from source code. For all users.
 
 Installation via `apt` and `snap` needs root privilege. So, the admin user takes these two approaches. It is possible to redirect the installation path using `dpkg` and source code installation so that no root privilege is required. So, the last two approaches can be used by regular users.
 
 
 ### System-Level Installation
+<<<<<<< HEAD
 System-level installation is performed by the *admin user* because it requires the root privilege since it changes system-level configuration. It installs the software outside `/home` directory (usually in `/usr/` and `/opt/`) so that *all regular users* can use it.
+=======
+System-level installation is performed by the *admin user* because it requires the root privilege since it changes system-level configuration. It installs the software outside the `/home` directory (usually in `/usr/` and `/opt/`) so that *all regular users* can use it.
+>>>>>>> larx_resource/main
 
 Software with the following features can be installed globally:
 - commonly used;
@@ -51,9 +63,13 @@ We can create `/home/username/opt/` and `/home/username/.local` in the user home
 - `/home/username/opt/` is used for monolithic software like Foxit pdf reader.
 - `/home/username/.local` is used for installing external software that requires `make` and `make install` commands. 
 
+<<<<<<< HEAD
 **Note:** `/home/username/.local` mimics the `/usr/` directory to store installed files. Inside `.local/`, we have `./local/bin/`, `./local/lib/`, etc. We recommend the user put all the binary files in this directory. The software installed in this directory is generally the user's own compiled project or open-source software that needs to be compiled and installed using `make`, `make install` commands. 
+=======
+**Note:** `/home/username/.local` mimics the `/usr/` directory to store installed files. Inside `.local/`, we have `./local/bin/`, `./local/lib/`, etc. We recommend the user put all the binary files in this directory. The software installed in this directory is generally the user's own compiled project or open-source software that needs to be compiled and installed using `make` and `make install` commands. 
+>>>>>>> larx_resource/main
 
-Once the installation is completed, update `PATH` environment variable by adding the executable path, in general `bin\` directory, to ensure the computer can find the executables.
+Once the installation is completed, update the `PATH` environment variable by adding the executable path, in general `bin\` directory, to ensure the computer can find the executables.
 
 ```bash
 $ export PATH=$PATH:/home/username/opt/<software_dir>/bin      # for monolithic software
