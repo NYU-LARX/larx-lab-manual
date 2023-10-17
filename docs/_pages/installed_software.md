@@ -1,6 +1,6 @@
 # Installed Software List
 
-This page lists all system-level installed software. Every regular user can use them directly in their own accounts. We also provide some commonly used software that needs user-level installation. The installation processs are demonstrated in related pages.
+This page lists all system-level installed software. Every regular user can use them directly in their own accounts. We also provide some commonly used software that needs user-level installation. The installation processes are demonstrated in related pages.
 
 
 Editor: 
@@ -15,20 +15,20 @@ Programming:
 - Octave
 
 
-Web broser:
+Web browser:
 - chrome 
 - firefox
 
 
 Others:
 - ROS
-- openssh
+- OpenSSH
 
 
 
 ### Recommended User-Level Software
 
-The following popular software are recommended to installed locally by each regular user. We provide installation instructions for all of them.
+The following popular software is recommended to be installed locally by each regular user. We provide installation instructions for all of them.
 - [Latest Python](_pages/_software/python.md)
 - [MATLAB](_pages/_software/matlab.md)
 - [Julia](_pages/_software/julia.md)
