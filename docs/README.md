@@ -51,10 +51,10 @@ We also collects common questions for using the system and software:
 
 We encourage every lab member to crate a project repo in our LARX organization. A clear README file is required for every project.
 
-<!-->The following is a list of lab projects which uses robots and other lab facilitates.
+<!-->The following is a list of lab projects which uses robots and other lab facilitates.</-->
 
 - [Single Robot Triangle Formation](_project/single_robot_triangle/README.md)
-</-->
+
 
 
 ## Related Reading
