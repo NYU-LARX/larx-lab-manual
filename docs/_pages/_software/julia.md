@@ -1,8 +1,8 @@
 # Julia
 
-[Julia](https://julialang.org/) is a programming language that combines the advantages of C, Python, and MATLAB. It is designed for high performance computing and has been widely used in the academia.
+[Julia](https://julialang.org/) is a programming language combining C, Python, and MATLAB advantages. It is designed for high-performance computing and has been widely used in the academia.
 
-Julia offers precompiled binaries for different platforms. Therefore, we can directly download the binaries and add it to the `PATH` environment variable without compiling from the source.
+Julia offers precompiled binaries for different platforms. Therefore, we can directly download the binaries and add them to the `PATH` environment variable without compiling from the source.
 
 ### Install Julia
 First, download Julia tarball from the [downlad page](https://julialang.org/downloads/). Select the proper platform.
@@ -10,7 +10,7 @@ First, download Julia tarball from the [downlad page](https://julialang.org/down
 Then, unzip the tarball and move it to `/home/username/opt/`.
 ```bash
 $ tar xf julia-xxx
-$ mkdir /home/username/opt/julia-xxx    # follow the version convension
+$ mkdir /home/username/opt/julia-xxx    # follow the version convention
 $ cd julia-xxx && mv . /home/username/opt/julia-xxx
 ```
 
