@@ -22,9 +22,15 @@ Next, choose `NYU VPN: All Traffic``. Then, follow the instructions for connecti
 
 ### Remote Access via SSH 
 
+<<<<<<< HEAD
 SSH or Secure Shell is a network protocol that offers clients remote operations to the server, such as login, remote command line, etc. We use the `ssh` command to directly access the **Linux server**. 
 
 The `ssh` command, by default, provides a command line interface (CLI) to interact with the host computer. Graphic interfaces require the client machine to run an [X server](https://en.wikipedia.org/wiki/X.Org_Server).
+=======
+SSH or Secure Shell is a network protocol that offers clients remote operations to the server such as login, remote command-line, etc. We use the `ssh` command to access the **Linux server** directly. 
+
+By default, the `ssh` command provides a command line interface (CLI) to interact with the host computer. Graphic interfaces require the client machine to run an [X server](https://en.wikipedia.org/wiki/X.Org_Server).
+>>>>>>> larx_resource/main
 
 For Linux clients, the X server is automatically installed. For Windows and MacOS clients, we need to install an X server to use graphic applications in the Linux host.
 
@@ -44,7 +50,11 @@ $ ssh foo@x.x.x.x	 	  # access user account foo with CLI only
 $ ssh -X foo@x.x.x.x 	# access user account foo by enabling graphic interfaces.
 ```
 
+<<<<<<< HEAD
 `ssh -X` means enabling `X11` forwarding. `X11` is a window system for bitmap displays, and it provides a framework for a GUI environment. Take MATLAB, for example. We cannot visualize the MATLAB graphic interface if we do not include `-X` option. However, the graphic interface is available if we include `-X`.
+=======
+`ssh -X` means enabling `X11` forwarding. `X11` is a window system for bitmap displays, and it provides a framework for a GUI environment. Take MATLAB, for example. We cannot visualize the MATLAB graphic interface if we do not include the `-X` option. However, the graphic interface is available if we include `-X`.
+>>>>>>> larx_resource/main
 
 After the login, we can use the command line to start an application. 
 
@@ -77,7 +87,11 @@ It is recommended to use [MobaXterm](https://mobaxterm.mobatek.net/), which cont
 
 When using `ssh -X`, the server returns the display information and sends it back to the client. The client will interpret the display information and display it to the user. This process is generic and can be applied to any software with a graphic interface. However, the access process can be slow because of a huge amount of display information. 
 
+<<<<<<< HEAD
 In practice, many software programs do not need to enable `-X` option to have a graphic interface. They only require the server and software to have the same software. The server runs the software and sends the computation back only. The client software receives the computation results and displays the result to the user directly. No additional display information needs to be transmitted. The following figure shows two different modes. 
+=======
+In practice, many software does not need to enable the `-X` option to have a graphic interface. They only require the server and software to have the same software. The server runs the software and sends the computation back only. The client software receives the computation results and displays the result to the user directly. No additional display information needs to be transmitted. The following figure shows two different modes. 
+>>>>>>> larx_resource/main
 
 ![img](../_media/ssh_graphics.png)
 

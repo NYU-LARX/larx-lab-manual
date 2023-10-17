@@ -1,6 +1,10 @@
 # Installed Software List
 
+<<<<<<< HEAD
 This page lists all system-level installed software. Every regular user can use them directly in their own accounts. We also provide some commonly used software that needs user-level installation. The installation processes are demonstrated in related pages.
+=======
+This page lists all system-level installed software. Every regular user can use them directly in their accounts. We also provide some commonly used software that needs user-level installation. The installation processes are demonstrated in related pages.
+>>>>>>> larx_resource/main
 
 
 Editor: 
