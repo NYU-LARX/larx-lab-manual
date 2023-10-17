@@ -32,7 +32,7 @@ This page lists all available resources in the lab.
 
 ## Administrator Account
 
-For all computers, the administrator account is `larx`. The administrator is response for routine system update including updating software packages and editing system-level configuration files. The admin user name and password:
+For all computers, the administrator account is `larx`. The administrator is responsible for routine system updates, including updating software packages and editing system-level configuration files. The admin user name and password:
 
 - username: `larx`
 - password:  `larx`
@@ -49,18 +49,18 @@ All four computers are connected to NYU wifi with the following IP address:
 - Dell #2: `172.24.113.158`
 - Lambda: `172.24.113.159`
 
-**Note:** All IP addresses are private. To access computers remotely via `ssh`, make sure to first connect to **NYU network** or **NYU VPN**.
+**Note:** All IP addresses are private. To access computers remotely via `ssh`, first connect to **NYU network** or **NYU VPN**.
 
 
 
 ### Local Network Configuration
 
-A wireless Local Area Network (WAN) is set up for multi-agent control experiment purpose. Dell #3 is used as the base PC. The local AP and password are
+A wireless Local Area Network (WAN) is set up for multi-agent control experiment purposes. Dell #3 is used as the base PC. The local AP and password are
 
 - WiFi name: `TP-Link_A914`
 - Password: `80187233`
 
-All robots and PC are assigned with the following IP addresses:
+All robots and PCs are assigned with the following IP addresses:
 
 - Dell #3: `192.168.0.125`
 - Burger #1: `192.168.0.208`
