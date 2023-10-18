@@ -32,21 +32,13 @@ $ sudo delgroup foobar    # delete an existing group `foobar`
 
 We need the admin user to add or delete a user from or to a group. 
 
-<<<<<<< HEAD
-To add an existing user to an existing group, we use the command `usermod`. Log into `larx` account. Open a terminal and type
-=======
 To add an existing user to an existing group, we use the command `usermod`. Log into the `larx` account. Open a terminal and type
->>>>>>> larx_resource/main
 
 ```bash
 $ sudo usermod -a -G group123 foo     # add a user `foo` to a group `foobar`
 ```
 
-<<<<<<< HEAD
-To delete an existing user in a group, we use the command `deluser`. Log into `larx` account. Open a terminal and type
-=======
 To delete an existing user in a group, we use the command `deluser`. Log into the `larx` account. Open a terminal and type
->>>>>>> larx_resource/main
 
 ```bash
 $ sudo deluser foo foobar         #  delete a user `foo` from a group `foobar`
@@ -65,11 +57,7 @@ The output may be like this:
 
 ![image](https://www.cyberciti.biz/media/new/faq/2006/02/etc_group_file.jpg)
 
-<<<<<<< HEAD
-1. **group_name**: It is the name of the group. If you run `ls -l` command, you will see this name printed in the group field.
-=======
 1. **group_name**: It is the name of the group. If you run the `ls -l` command, you will see this name printed in the group field.
->>>>>>> larx_resource/main
 2. **Password**: Generally, the password is not used. Hence, it is empty/blank. It can store encrypted passwords. This is useful for implementing privileged groups.
 3. **Group ID (GID)**: Each user must be assigned a group ID. You can see this number in your `/etc/passwd` file.
 4. **Group List**: It is a list of user names of users who are members of the group. Commas must separate the user names.
@@ -82,11 +70,7 @@ Some quick commands.
 $ groups foo 	# print all group names that user foo is in
 ```
 
-<<<<<<< HEAD
-We can also print group ID of a particular user using `id` command:
-=======
 We can also print group ID of a particular user using the `id` command:
->>>>>>> larx_resource/main
 
 ```bash
 $ id -G foo 	# print group id that user foo is in

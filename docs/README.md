@@ -16,14 +16,13 @@ All available lab resources and related configurations are introduced in [Basic 
 
 ## User and Group Management
 
-We encourage everyone to create their **own user account** to use workstations instead of the administrator account for the following reasons:
-
+We encourage everyone to create their **own user account** to use workstations instead of using the administrator account for the following reasons:
 - To avoid potential configuration confusion.
 - To keep a clean and tidy server environment for the administrator and all users.
 - To provide a better maintenance and update process.
 - To ensure the privacy of individual users. 
 
-To create a regular user account for each user, please look at [User Management](_pages/user_management.md). 
+To create a regular user account, please look at [User Management](_pages/user_management.md). 
 
 We refer to [User Management](_pages/user_management.md) and [Group Management](_pages/group_management.md) for more details about Linux users and groups.
 
